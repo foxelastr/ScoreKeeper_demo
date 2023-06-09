@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ping Pong Score Keeper</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <link rel="stylesheet" href="../app.css">
+</head>
+
+<body>
+    <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <!-- <a class="navbar-item" href="../index.html"> -->
+                <img src="../scoreboard_icon.png" width="112" height="28" id="icon">
+            <!-- </a> -->
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="../index.html">
+                    Home
+                </a>
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        Score Keepers
+                    </a>
+
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" href="../Badminton/badminton_score.html">
+                            Badminton Score Keeper
+                        </a>
+                        <a class="navbar-item" href="../PingPong/pingpong_score.html">
+                            Pingpong Score Keeper
+                        </a>
+                        <!-- <a class="navbar-item">
+                            Contact
+                        </a> -->
+                        <!-- <hr class="navbar-divider">
+                        <a class="navbar-item">
+                            Report an issue
+                        </a> -->
+                    </div>
+                </div>
+            <!-- </div> -->
+
+            <!-- <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-primary">
+                            <strong>Sign up</strong>
+                        </a>
+                        <a class="button is-light">
+                            Log in
+                        </a>
+                    </div>
+                </div>
+            </div> -->
+        <!-- </div> -->
+    </nav>
+
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-half is-offset-one-quarter">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-3by2">
+                                <img src="pingpong.jpg" alt="Placeholder image">
+                            </figure>
+                        </div>
+                        <header class="card-header">
+                            <p class="card-header-title is-3">
+                                Ping Pong Score Keeper
+                            </p>
+                        </header>
+                    </div>
+                    </header>
+                    <div class="card-content">
+                        <div class="colums">
+                            <div class="column is-one-third is-offset-one-third">
+                                <h1 class="title is-size-1 "><span id="p1Display">0</span> : <span
+                                        id="p2Display">0</span></h1>
+                            </div>
+                        </div>
+                        <p class="subtitle is-4">
+                            Use the buttons below to keep score.
+                        </p>
+                        <div>
+                            <label for="playto" class="label is-large is-inline">Playing To</label>
+                            <div class="select is-rounded">
+                                <select name="finishScore" id="finishScore">
+                                    <option value="5">5</option>
+                                    <option value="7">7</option>
+                                    <option value="9">9</option>
+                                    <option value="11">11</option>
+                                    <option value="13">13</option>
+                                    <option value="15">15</option>
+                                    <option value="17">17</option>
+                                    <option value="19">19</option>
+                                    <option value="21">21</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+                    <footer class="card-footer">
+                        <button id="p1Button" class="button card-footer-item is-info is-normal">+1 Blue Team</button>
+                        <button id="reset" class="button card-footer-item is-warning is-normal">Reset</button>
+                        <button id="p2Button" class="button card-footer-item is-danger is-normal">+1 Red Team</button>
+                    </footer>
+                    <br>
+                    <div class="container">
+                        <article class="message is-dark">
+                            <div class="message-header">
+                                <p>Let Rule</p>
+                            </div>
+                            <div class="section" id="score">
+                                <div class="content">
+                                    <p>
+                                        A let is a rally of which the result is not scored, and is called in the
+                                        following circumstances:
+                                    </p>
+                                    <ul>
+                                        <li>The ball touches the net in service (service), provided the service is
+                                            otherwise correct or the ball is obstructed by the player on the receiving
+                                            side. Obstruction means a player touches the ball when it is above or
+                                            traveling towards the playing surface, not having touched the player's court
+                                            since last being struck by the player.</li>
+                                        <li>When the player on the receiving side is not ready and the service is
+                                            delivered.</li>
+                                        <li>Player's failure to make a service or a return or to comply with the Laws is
+                                            due to a disturbance outside the control of the player.</li>
+                                        <li>Play is interrupted by the umpire or assistant umpire.</li>
+                                    </ul>
+                                    <p>
+                                        A let is also called foul service, if the ball hits the server's side of the
+                                        table, if the ball does not pass further than the edge, and if the ball hits the
+                                        table edge and hits the net.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="container">
+                        <article class="message is-dark">
+                            <div class="message-header">
+                                <p>Scoring Rule</p>
+                            </div>
+                            <div class="section" id="score">
+                                <div class="content">
+                                    <p>
+                                        A point is scored by the player for any of several results of the rally:
+                                    </p>
+                                    <ul>
+                                        <li>The opponent fails to make a correct service or return.</li>
+                                        <li>After making a service or a return, the ball touches anything other than the
+                                            net
+                                            assembly before being struck by the opponent.</li>
+                                        <li>The ball passes over the player's court or beyond their end line without
+                                            touching their court, after being struck by the opponent.</li>
+                                        <li>The opponent obstructs the ball.</li>
+                                        <li>The opponent strikes the ball twice successively. The hand that is holding
+                                            the
+                                            racket counts as part of the racket and that making a good return off one's
+                                            hand
+                                            or fingers is allowed. It is not a fault if the ball accidentally hits one's
+                                            hand or fingers and then subsequently hits the racket.</li>
+                                        <li>The opponent strikes the ball with a side of the racket blade whose surface
+                                            is
+                                            not covered with rubber.</li>
+                                        <li>The opponent moves the playing surface or touches the net assembly.</li>
+                                        <li>The opponent's free hand touches the playing surface.</li>
+                                        <li>As a receiver under the expedite system, completing 13 returns in a rally.
+                                        </li>
+                                        <li>The opponent that has been warned by the umpire commits a second offense in
+                                            the
+                                            same individual match or team match. If the third offence happens, 2 points
+                                            will
+                                            be given to the player.If the individual match or the team match has not
+                                            ended,
+                                            any unused penalty points can be transferred to the next game of that match.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="pingpong.js"></script>
+</body>
+
+</html>

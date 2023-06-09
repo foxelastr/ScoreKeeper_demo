@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Badminton Score Keeper</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <link rel="stylesheet" href="../app.css">
+</head>
+
+<body>
+    <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <!-- <a class="navbar-item" href="../index.html"> -->
+                <img src="../scoreboard_icon.png" width="112" height="28" id="icon">
+            <!-- </a> -->
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="../index.html">
+                    Home
+                </a>
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        Score Keepers
+                    </a>
+
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" href="../Badminton/badminton_score.html">
+                            Badminton Score Keeper
+                        </a>
+                        <a class="navbar-item" href="../PingPong/pingpong_score.html">
+                            Pingpong Score Keeper
+                        </a>
+                        <!-- <a class="navbar-item">
+                            Contact
+                        </a> -->
+                        <!-- <hr class="navbar-divider">
+                        <a class="navbar-item">
+                            Report an issue
+                        </a> -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-primary">
+                            <strong>Sign up</strong>
+                        </a>
+                        <a class="button is-light">
+                            Log in
+                        </a>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </nav>
+
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-half is-offset-one-quarter">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-3by2">
+                                <img src="badminton.jpg" alt="Placeholder image">
+                            </figure>
+                        </div>
+                        <header class="card-header">
+                            <p class="card-header-title is-3">
+                                Badminton Score Keeper
+                            </p>
+                        </header>
+                    </div>
+                    </header>
+                    <div class="card-content">
+                        <div class="colums">
+                            <div class="column is-one-third is-offset-one-third">
+                                <h1 class="title is-size-1 "><span id="p1Display">0</span> : <span
+                                        id="p2Display">0</span></h1>
+                            </div>
+                        </div>
+                        <p class="subtitle is-4">
+                            Use the buttons below to keep score.
+                        </p>
+                        <div>
+                            <label for="playto" class="label is-large is-inline">Playing To</label>
+                            <div class="select is-rounded">
+                                <select name="finishScore" id="finishScore">
+                                    <option value="5">5</option>
+                                    <option value="7">7</option>
+                                    <option value="9">9</option>
+                                    <option value="11">11</option>
+                                    <option value="13">13</option>
+                                    <option value="15">15</option>
+                                    <option value="17">17</option>
+                                    <option value="19">19</option>
+                                    <option value="21">21</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+                    <footer class="card-footer">
+                        <button id="p1Button" class="button card-footer-item is-info is-normal">+1 Blue Team</button>
+                        <button id="reset" class="button card-footer-item is-warning is-normal">Reset</button>
+                        <button id="p2Button" class="button card-footer-item is-danger is-normal">+1 Red Team</button>
+                    </footer>
+                    <br>
+                    <div class="container">
+                        <article class="message is-dark">
+                            <div class="message-header">
+                                <p>Let Rule</p>
+                            </div>
+                            <div class="section" id="score">
+                                <div class="content">
+                                    <p>
+                                        If a let is called, the rally is stopped and replayed with no change to the
+                                        score. Lets may occur because of some unexpected disturbance such as a
+                                        shuttlecock landing on a court (having been hit there by players playing in
+                                        adjacent court) or in small halls the shuttle may touch an overhead rail which
+                                        can be classed as a let.
+                                    </p>
+                                    <br>
+                                    <p>
+                                        If the receiver is not ready when the service is delivered, a let shall be
+                                        called; yet, if the receiver attempts to return the shuttlecock, the receiver
+                                        shall be judged to have been ready.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="container">
+                        <article class="message is-dark">
+                            <div class="message-header">
+                                <p>Scoring Rule</p>
+                            </div>
+                            <div class="section" id="score">
+                                <div class="content">
+                                    <p>
+                                        A point is scored by the player for any of several results of the rally:
+                                    </p>
+                                    <ul>
+                                        <li>Each game is played to 21 points, with players scoring a point whenever they
+                                            win a rally regardless of whether they served(this differs from the old
+                                            system where players could only win a point on their serve and each game was
+                                            played to 15 points). A match is the best of three games.</li>
+                                        <li>If the score ties at 20–20, then the game continues until one side gains a
+                                            two-point lead (such as 24–22), except when there is a tie at 29–29, in
+                                            which the game goes to a golden point of 30. Whoever scores this point wins
+                                            the game.</li>
+                                        <li>At the start of a match, the shuttlecock is cast and the side towards which
+                                            the shuttlecock is pointing serves first. Alternatively, a coin may be
+                                            tossed, with the winners choosing whether to serve or receive first, or
+                                            choosing which end of the court to occupy first, and their opponents making
+                                            the leftover the remaining choice.</li>
+                                        <li>In subsequent games, the winners of the previous game serve first. Matches
+                                            are best out of three: a player or pair must win two games (of 21 points
+                                            each) to win the match. For the first rally of any doubles game, the serving
+                                            pair may decide who serves and the receiving pair may decide who receives.
+                                            The players change ends at the start of the second game; if the match
+                                            reaches a third game, they change ends both at the start of the game and
+                                            when the leading player's or pair's score reaches 11 points.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="badminton.js"></script>
+</body>
+
+</html>

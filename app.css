@@ -1,0 +1,21 @@
+#score {
+    padding-top : 1rem;
+}
+
+.button{
+    font-weight: bold;   
+}
+
+#icon {
+    padding-left: 0.5rem;
+}
+
+span.sport {
+    font-weight: bold;
+    color: blueviolet;
+}
+
+span.func {
+    font-weight: bold;
+    color: brown;
+}

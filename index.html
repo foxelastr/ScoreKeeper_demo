@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Score Keeper</title>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+    <section class="section">
+        <div class="container">
+            <h1 class="title">
+                Score Keeper
+            </h1>
+            <!-- <p class="subtitle">
+                Score Keeper
+            </p> -->
+        </div>
+    </section>
+
+    <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <img src="scoreboard_icon.png" width="112" height="28" id="icon">
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="index.html">
+                    Home
+                </a>
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        Score Keepers
+                    </a>
+
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" href="Badminton/badminton_score.html">
+                            Badminton Score Keeper
+                        </a>
+                        <a class="navbar-item" href="PingPong/pingpong_score.html">
+                            Pingpong Score Keeper
+                        </a>
+                        <!-- <a class="navbar-item">
+                            Contact
+                        </a> -->
+                        <!-- <hr class="navbar-divider">
+                        <a class="navbar-item">
+                            Report an issue
+                        </a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="columns">
+        <div class="column is-half is-offset-one-quarter">
+            <div class="card">
+                <div class="card-image">
+                </div>
+                <header class="card-header">
+                    <p class="card-header-title is-3">
+                        Enjoy Your Game!
+                    </p>
+                </header>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <article class="message is-dark">
+            <div class="message-header">
+                <p>Score Keeper Type</p>
+            </div>
+            <div class="section" id="score">
+                <div class="content">
+                    <p>
+                        There are 2 Score Keepers
+                    </p>
+                    <ul>
+                        <li>Score Keeper for <span class="sport">Badminton</span></li>
+                        <li>Score Keeper for <span class="sport">PingPong</span></li>
+                    </ul>
+                    <p>
+                        And each Score Keeper contains<br> <span class="func">scoring</span> and <span class="func">let</span> rules!
+                    </p>
+                    <p>
+                        Enjoy your game and thank you for using this app!
+                    </p>
+                </div>
+            </div>
+        </article>
+    </div>
+
+</body>
+
+</html>
